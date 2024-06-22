@@ -1,0 +1,13 @@
+/* change size of title slide*/
+
+.title {
+  font-size: 70px !important;
+  color: black !important;
+}
+
+
+/* change size of title date*/
+.date {
+  font-size: 30px !important;
+  color: black !important;
+}
