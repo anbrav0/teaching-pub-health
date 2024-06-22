@@ -9,7 +9,7 @@ format:
     scrollable: true
     slide-number: true
 css: style.css
-editor: visual
+editor: source
 ---
 
 ## Objectives
@@ -61,7 +61,7 @@ Data is interpreted through many phases of a project, from research question to 
 
 # Study Design and protocol
 
-## what is it that you want to do?
+## What is it that you want to do?
 
 ::: {style="font-size:25px"}
 -   What are you trying to investigate?
