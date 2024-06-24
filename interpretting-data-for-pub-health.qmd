@@ -119,8 +119,8 @@ what type of data are you collecting?
 ::: {style="font-size:25px"}
 -   Sociodemographic variables? (age, income, gender, sex assigned at birth, migration status, relationship status, employment status)
 -   Anthropometric data (height, weight, waist measurement?)
--   Family environment data? ( Family environmental Scale (FES: <https://www.mindgarden.com/96-family-environment-scale)>
--   Cultural value scales? (MACVS: <https://elcentro.sonhs.miami.edu/research/measures-library/macvs/index.html)>
+-   Family environment data? [Family environmental Scale](https://www.mindgarden.com/96-family-environment-scale))
+-   Cultural value scales? [MACVS](https://elcentro.sonhs.miami.edu/research/measures-library/macvs/index.html))
 -   Biological specimen? (hair urine, saliva, blood, blood samples?)
 -   Neurocognitive tasks? (RAVLT, EST NIH-TB?)
 -   Neuroimaging? (MRI Scan)
@@ -207,6 +207,8 @@ to ensure that your work is reproducible you should use code 👩‍💻
 -   provides new tools for methodologies
 -   transparency and reproducibility for your work (Quarto)
     -   this is the most IMO!
+
+# Data interpretation 🤔
 
 ## Data Interpretation comes in many flavors
 
