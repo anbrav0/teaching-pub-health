@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Interpreting Data for Public Health, Research Policy, or Practice"
 subtitle: "PHC6930C - Intergrative Seminar in Public Health"
@@ -560,3 +561,569 @@ summary(RandIntModel_Mollusca)
 7.  A Quart o' {rUM} (Using the {rUM} Package for Reproducible Medical Research) (<https://www.youtube.com/watch?v=tiwx8mSUL1c&t=128s)>
 
 # Thank you! 🙏
+=======
+---
+title: "Interpreting Data for Public Health, Research Policy, or Practice"
+subtitle: "PHC6930C - Intergrative Seminar in Public Health"
+author: "Ana Bravo"
+date: now
+format:
+  revealjs: 
+    theme: simple
+    scrollable: true
+    slide-number: true
+css: style.css
+editor: source
+---
+
+## Objectives
+
+-   Understand the process of data collection.
+-   Study designs / protocols
+-   Challenges with data
+-   How data is interpreted and what it means
+-   what I do in data science
+
+## Introduction
+
+A little bit about me
+
+::: columns
+::: {.column width="70%"}
+::: panel-tabset
+### In my past life:
+
+-   Mathematics tutor 🧮
+-   Research assistant
+-   Lab instructor
+
+### Currently:
+
+-   Amateur Cook 👩‍🍳
+-   Non-profit board of directors for an LGBT+ org
+-   Data analyst from time to time
+:::
+:::
+
+::: {.column width="30%"}
+![](images/ana.png){width="234"}
+:::
+
+::: footer
+<https://anbrav0.github.io/>
+:::
+:::
+
+## Objectives
+
+Data is interpreted through many phases of a project, from research question to protocol deployment. This talk will cover:
+
+-   Study designs and your protocol
+-   Understanding the beginnings of data collection
+-   Challenges with data/data collection
+-   How to (intro) data science with your data (the meat of todays topic)
+
+# Study Design and protocol
+
+## What is it that you want to do?
+
+::: {style="font-size:25px"}
+-   What are you trying to investigate?
+
+    -   Ex: what are factors that contribute to achievement gaps?
+
+    -   Ex: Do certain activities in school lead to better health outcomes?
+
+    -   Does the use of alcohol, marijuana, and tobacco lead to use of other substances?
+
+-   What is the significance of your design?
+
+-   What does the research say about your topic?
+
+-   It is important to be familiar with what other scientists have discovered so far.
+
+-   Are there any gaps in the work?
+
+    -   For ex: problem: there is a lot of data on childhood outcomes and diseases, but a lot of the research sometimes is after infection/or the disease has already progressed or already symptomatic. Solution -\> understand the social, emotional, and behavioral activities through time (longitudinal) of a youth through their childhood, adolescent, and early adult development, so what are some of the factors that may have led to these events.
+
+::: footer
+<https://abcdstudy.org/about/>
+:::
+:::
+
+## Launching a study protocol
+
+::: panel-tabset
+### your sample
+
+::: {style="font-size:25px"}
+What does your funding look like? What is the greatest number of samples you can have given your funding, to detect an effect? (Power analysis)
+
+-   Who are you recruiting? Are you working with human subjects? Animal subjects? Kids, adults, vulnerable populations? (recruitment and enrollment)
+    -   Ex: If your working with kids, how does their school schedule affect their ability to participate in the study, how will the study accommodate?
+    -   Who is/was eligible and ineligible to participate in the study? (inclusion exclusion criteria)
+        -   Ex: we are interested in investigating the association between suicidality and ADHD diagnosis, children diagnosed with tic-disorder are not eligible to participate.
+:::
+
+### recruitment site
+
+-   Who is running your protocol? Is this a multi-site study? (e.g., many sites will be recruiting participants)
+
+-   how many times will you be collecting this data? (is this supposed to be a longitudinal design? (more than one time point collected) cohort design?
+
+### your protocol
+
+-   What will the interviews/protocol be like? How long will they take? What type of data are you collecting and why? (more on this later)
+    -   For ex: the ABCD protocol is a comprehensive set of physical, cognitive and social emotional, behavioral and academic assessments in addition to a neuroimaging and biospecimen analysis done either annually or bi-annually for 10 year through the child's life.
+
+### data
+
+what type of data are you collecting?
+
+::: {style="font-size:25px"}
+-   Sociodemographic variables? (age, income, gender, sex assigned at birth, migration status, relationship status, employment status)
+-   Anthropometric data (height, weight, waist measurement?)
+-   Family environment data? [Family environmental Scale](https://www.mindgarden.com/96-family-environment-scale))
+-   Cultural value scales? [MACVS](https://elcentro.sonhs.miami.edu/research/measures-library/macvs/index.html))
+-   Biological specimen? (hair urine, saliva, blood, blood samples?)
+-   Neurocognitive tasks? (RAVLT, EST NIH-TB?)
+-   Neuroimaging? (MRI Scan)
+:::
+:::
+
+::: footer
+<https://abcdstudy.org/scientists/protocols/>
+:::
+
+# Proposing your study 📚
+
+## Steps
+
+::: panel-tabset
+### aims
+
+Determine your aims
+
+-   Ex: Determine social, behavioral, and emotional mechanisms that promote childhood well-being.
+-   Ex: Address intentional injuries across lifespan to understand associated risk factors of violence and injury epidemiology.
+    -   Ex: Define the parameters of Type II Diabetes that include risk factors, in order to develop an effective wellness plan.
+
+### power
+
+::: {style="font-size:25px"}
+-   In real life, you will not be able to measure the entire K-12 population of the U.S. to determine children's social, behavioral, and emotional mechanisms. Instead, you will need to do a power sample analysis.
+    -   Used to determine the adequate sample size by researchers to determine how many subjects/participants/observations are needed to answer your research question (null hypothesis) and avoid type I and Type II errors.
+
+![](images/power.jpg){fig-align="center" width="453"}
+:::
+
+### timeline
+
+-   how long will this study be running? for two years, three years?
+
+-   How much time will it take to recruit participants? (recruitment and enrollment)
+
+-   how much time will it take to collect data? (data collection)
+
+-   how much time will it take to *clean* the data?
+
+    -   this part takes the longest IMO!
+
+### conclusion
+
+::: {style="font-size:25px"}
+why is this important to do? What is the significance of this?
+
+-   Ex: what are factors that contribute to achievement gaps?
+
+-   Ex: Do certain activities in school lead to better health outcomes?
+
+-   Ex: Does the use of alcohol, marijuana, and tobacco lead to use of other substances?
+
+    A lot of the reason human subject research is investigated is in the hopes of leading to new policies and interventions/decisions about the study population:
+
+    -   what are factors that contribute to achievement gaps?
+        -   Leads to policy decision in curricula and other programs
+    -   How prevalent is traumatic brain injury (TBI) in student athletes?
+        -   Assessment, education, precautions and changes in student athletics
+    -   Does the use of alcohol and marijuana and tobacco lead to use of other substances?
+        -   Leads to substance use prevention and early interventions.
+:::
+:::
+
+## Why am I talking about this as a data scientists? 👩‍🔬
+
+-   Through the entire stage of your study, from research question to protocol deployment, you should consider and have a team of experts,(including a data scientist, from the beginning!)
+-   Why?
+    -   Because understanding the type of data you want to collect is important (data type)
+    -   How to present your data findings (data visualization) How do you want to answer your research question? (Regression? mixed- effects? Correlated data?, nested- data?)
+    -   Reproducibility?
+        -   As researcher we have a duty to help other scientist be able to reproduce our same findings:
+
+to ensure that your work is reproducible you should use code 👩‍💻
+
+# A (gentle) introduction of how I do Data Science in my work
+
+## Learn how to code
+
+-   if you are doing something repetitive, using a programming language can help you automate your work (using functions)
+-   in your code/manuscript, you are able to data exploring, cleaning visualizng, *and* modeling straight onto the document. [(Rmarkdown/Quarto)](https://quarto.org/docs/get-started/hello/rstudio.html)
+-   provides new tools for methodologies
+-   transparency and reproducibility for your work (Quarto)
+    -   this is the most IMO!
+
+# Data interpretation 🤔
+
+## Data Interpretation comes in many flavors
+
+::: panel-tabset
+### Data prep
+
+-   Data preparation:
+    -   building redcap servers,
+    -   hosting any clinical or human subject research data instruments
+    -   building your survey items
+
+### EDA
+
+-   Explore the data:
+    -   What does my data look like?
+    -   what are the largest and smallest values in my data?
+    -   is this particular variable a "type in" form?
+    -   do I need to *transform* certain variables?
+    -   do we need to group certain categories?
+    -   in this step you also incorporate a little bit of visualizations
+
+### Compute
+
+-   what programming language will I use?
+    -   Do i need to use one to visualize, and a different one to model? (SAS to model, R to visualize?)
+    -   Are we planning on writing a manuscript, publish a paper, or present these findings?
+
+### Model
+
+-   Modeling your data:
+    -   what type of test will you be running for your data?
+    -   will you be running a t-test, linear regression, maybe a mixed effects model?
+    -   what type of questions did you ask? and what type of data do you have?
+        -   is this data correlated?
+        -   is this data nested?
+        -   do you have repeated measures?
+
+⭐️ important: you should consult with your team (PI, epidemoligist, and your Data Scientist) when asking these questions
+
+### Visualize
+
+-   Visualizing your data:
+    -   what story do you want to convey to your audience?
+        -   I think that science, especially if you are working with Community Based Research (CBR), should be accessible. Meaning, understandable to a wide audience. (doctors, people in health care, researchers, educators, and the community) plain english please.
+            -   [*legalese*](https://bcs.mit.edu/news/even-lawyers-dont-legalese) 🤢
+    -   are you planning on building plots, graphs, visuals, maybe checking the normality of your data?
+:::
+
+## Data Preparation phase
+
+::: columns
+::: {.column width="50%"}
+-   There is a fantastic video by an Associate Professor at the University of Miami on building Redcap (what I consider the golden standard in data collection) to collect research data on HIV and substance abuse
+    -   Questions I need to consider are:
+        -   how will this project be developed?
+        -   how will you set up your instruments?
+        -   will you have redcap check for eligibility?
+        -   what variable type would you like your instruments to be?
+:::
+
+::: {.column width="50%"}
+![](images/redcap.png){fig-align="center" width="439"}
+:::
+
+::: footer
+[RedCap, HIV, Substance use - Raymond Balise](https://www.youtube.com/watch?v=GjiZm4OUgK0&t=92s)
+:::
+:::
+
+## Exploratory Data Analysis
+
+-   this part is *extremely* important to me, no matter what field you are in public health.
+-   the first thing I do, once I have the data, is see "what does my data even look like?"
+-   a basic overview of the EDA process is:
+    -   generating descriptive statistics 📊
+    -   check to see if I have any outliers
+    -   maybe see if there is any differences between groups:
+        -   e.g., calculating the average lifespan between men and women after a colorectal diagnosis
+    -   this process also may include "cleaning" your data up a bit.
+    -   this process is dynamic, and should be incorporated in every step
+    -   or maybe your curious of seeing the general trend in the relationship between planktonic larvae duration and temperature?
+    -   or maybe you want to see the general mean response rate of a certain instrument:
+
+::: {.column width="100%"}
+![](images/lonliness.png){fig-align="center"}
+:::
+
+::: footer
+[EDA with the tidyverse/Rstudio](https://r4ds.hadley.nz/eda)
+:::
+
+## Computing the data
+
+-   What type of programming language are you planning on using for your research project?
+    -   personally in my work, I *always* set up a new project for team and use R/Quarto, keep folders called "raw data" , "clean data" , "outputs" "figures" neatly and organized in cloud based security server only accessible to my team. this method ensures i keep rigorous documentation of every step i handle the data. this method also allows me to:
+        -   include all my calculations (including modeling) in my code/manuscript.
+        -   maintain a tidy level of reproducability
+        -   and R is also *free.*
+            -   SAS is a wonderful and powerful tool, but if you do not have a membership outside the university setting it is hard to access.
+
+::: {.column width="100%"}
+![](images/quarto.png){fig-align="center"}
+:::
+
+## Visualizing the data
+
+-   During my work, EDA process and creating visualizations go hand in hand. Remember, during your EDA, you are trying to investigate what your data is trying to tell you. It is important to become familiar with the data and asking the right questions
+    -   how does the variation between variables look like?
+    -   what does my distribution look like?
+-   when you understand or become familiar with the data you can visualize it to convey important messages to inform the public, thus leading the changes in policy, as well as drive decision making about the population.
+
+### Visuals example
+
+::: {.column width="100%"}
+![individuals who reported they had a good time (non-outlier) vs. individuals who reported they did not have a good time (outlier) participating in a research study](images/ABCD.png){fig-align="center" width="439"}
+:::
+
+::: {.column width="100%"}
+![general pattern of education among a sample in SoFLo](images/LOE_P.png)
+:::
+
+::: {.column width="100%"}
+![what can we say might be going on in this network of friends likelihood to participate when looking at it in a closeness perspective?](images/tidyplot.png)
+:::
+
+::: {.column width="100%"}
+![what can we say the bidirection relationship within these networks look like?](images/closeness.png)
+:::
+
+## Modeling Data
+
+check out the link below for developing good statistical practice when modeling with R.
+
+-   if relationships exist between two variables, it may appear as pattern in your data (thats why EDA is important because it may give you hints about these patterns)
+    -   ask yourself if these patterns are due:
+        -   to random chance
+        -   how are you able to describe the relationship that implies this pattern
+        -   what variable might be affecting this relationship?
+
+::: {.column width="100%"}
+![three way interaction between sex and outcome and predictor of interests](images/interaction_3way.png){fig-align="center"}
+:::
+
+## *Bring it all together now 🎶*
+
+-   Understand all these steps are vital points in interpreting your data:
+    -   understand your project design helps you understand the goals and *aims* of your project. (prep)
+    -   Exploring your data helps you understand the *story* your data is trying to tell you. (EDA)
+    -   Visualizing your data helps you understand the *patterns* of your data. (visualize)
+    -   Computing your data helps you understand the *distributions* of your data. (compute)
+    -   Modeling your data helps you understand the *relationships* of your data. (model)
+
+at each step, your making decisions about your data, and how you will interpret your findings.
+
+::: footer
+[developing good statistical practice with R](https://www.tmwr.org)
+:::
+
+## in my work now:
+
+-   i've had to implement every aspect of what we just talked about including
+    -   mutating or transforming the data
+
+```{r}
+#| message: false
+#| echo: true
+
+library(tidyverse)
+
+starwars |> 
+  select(name, mass, species) |> 
+  group_by(species) |> 
+  mutate(mass_norm = mass / mean(mass, na.rm = TRUE))
+
+
+```
+
+-   categorizing or grouping
+
+```{r}
+#| message: false
+#| echo: true
+
+mtcars |> 
+  mutate(cg = case_when(
+    carb <= 2 ~ "low",
+    carb > 2 ~ "high"
+  ))
+
+
+
+```
+
+-   transforming the shape of the data
+
+```{r}
+#| message: false
+#| echo: true
+
+
+# turn wide data to long data for easier categorization
+relig_income |> 
+  pivot_longer(!religion, names_to = "income", values_to = "count")
+
+
+
+
+```
+
+-   Visualizing the data
+
+```{r}
+#| message: false
+#| echo: true
+#| eval: true
+
+
+library(igraphdata)
+library(ggraph)
+library(patchwork)
+library(graphlayouts)
+data("karate")
+
+
+
+  ggraph(karate, layout = "focus", focus = 1) +
+  draw_circle(use = "focus", max.circle = 3) +
+  geom_edge_link0(edge_color = "black", edge_width = 0.3) +
+  geom_node_point(aes(fill = as.factor(Faction)), size = 2, shape = 21) +
+  scale_fill_manual(values = c("#8B2323", "#EEAD0E")) +
+  theme_graph() +
+  theme(legend.position = "none") +
+  coord_fixed() +
+  labs(title = " Ego Network UM1010")
+
+
+
+   ggraph(karate, layout = "focus", focus = 34) +
+  draw_circle(use = "focus", max.circle = 4) +
+  geom_edge_link0(edge_color = "black", edge_width = 0.3) +
+  geom_node_point(aes(fill = as.factor(Faction)), size = 2, shape = 21) +
+  scale_fill_manual(values = c("#8B2323", "#EEAD0E")) +
+  theme_graph() +
+  theme(legend.position = "none") +
+  coord_fixed() +
+  labs(title = "Ego Network UM1034")
+
+
+
+```
+
+-   create functions to automate my work
+
+```{r}
+#| message: false
+#| echo: true
+#| eval: false
+
+# create empty list for matched data
+matching_data <- list()
+
+# Loop through the CSV files
+for (csv_file in csv_files) {
+  # Extract record ID from the file name
+  record_id <- gsub(".csv$", "", basename(csv_file))
+  
+  # Check if the record ID matches any pattern in filtered_data
+  if (any(sapply(filtered_data$study_id, function(pattern) grepl(pattern, record_id)))) {
+    # Read the CSV file
+    csv_data <- read_csv(csv_file)
+    
+    # Add the matching data to the list
+    matching_data[[length(matching_data) + 1]] <- csv_data
+  }
+}
+
+# make new df with matched observations
+combined_data <- bind_rows(matching_data)
+
+# plyr:rbind works and add NA values to missing values
+matching_data |> 
+  plyr::rbind.fill() 
+
+
+
+```
+
+-   model my data
+
+```{r}
+#| message: false
+#| echo: false
+#| eval: true
+
+# read clean data 
+PLD <- read_table("/Users/anabravo/Library/CloudStorage/OneDrive-Personal/FIU Related/Graduate/MPH Biostatistics/graduate-presentations/PLD.txt")
+
+
+```
+
+```{r}
+#| message: false
+#| echo: true
+#| eval: true
+
+library(lme4)
+
+# subset mollusca only
+Mollusca_subset <- 
+  PLD |> 
+  filter(phylum == "Mollusca")
+
+# creating log -transformed variables 
+Mollusca_subset$log_pld <- log(Mollusca_subset$pld)
+Mollusca_subset$log_temp <- log(Mollusca_subset$temp)
+
+# mixed model with random intercept only 
+RandIntModel_Mollusca <- lmer(log_pld ~ log_temp + (1 | species), data = Mollusca_subset)
+
+# summary of model fit
+summary(RandIntModel_Mollusca)
+
+
+
+```
+
+::: {style="font-size:25px"}
+**interpretation of temp variable** for the fixed part, we can interpret this parameter the same as a single-level regression model, [so $\beta_1$ is the increase/decrease in response for 1 unit increase/decrease in $x.$]{style="background-color:yellow"} In other words, for one unit increase in the degrees of temperature, there is a -1.5 decrease in Planktonic larval duration. (or, as the temperature increase, the plankton duration is lower.)
+:::
+
+::: {style="footer-size:9px"}
+::: footer
+[Random Intercept Model - Planktonic larval duration tutorial](https://anbrav0.github.io/R-health-blog/RandomInterceptModel.html)
+:::
+:::
+
+## Resources
+
+1.  R for Data Science (<https://r4ds.hadley.nz)>
+
+2.  Modeling with R (<https://www.tmwr.org)>
+
+3.  An Introduction to Statistical Learning with applications in R (<https://www.statlearning.com)>
+
+4.  R for the Rest of Us (<https://rfortherestofus.com)>
+
+5.  modern statistics with R (<https://www.modernstatisticswithr.com)>
+
+6.  R for Epidemiology (<https://www.r4epi.com/)>
+
+7.  A Quart o' {rUM} (Using the {rUM} Package for Reproducible Medical Research) (<https://www.youtube.com/watch?v=tiwx8mSUL1c&t=128s)>
+
+# Thank you! 🙏
+>>>>>>> 1284b4bbd9f70bfc71575326044c6866e3116bb7
