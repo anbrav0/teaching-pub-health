@@ -9,7 +9,7 @@ format:
     scrollable: true
     slide-number: true
 css: style.css
-editor: visual
+editor: source
 ---
 
 ## Objectives
