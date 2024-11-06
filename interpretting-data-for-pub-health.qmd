@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Interpreting Data for Public Health, Research Policy, or Practice"
 subtitle: "PHC6930C - Intergrative Seminar in Public Health"
