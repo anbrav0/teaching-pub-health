@@ -1,0 +1,4 @@
+- source: interpretting-data-for-pub-health.qmd
+  quarto-pub:
+    - id: 1b20ac4b-0e27-43d4-a5c3-3f5e0f641b18
+      url: 'https://ana.quarto.pub/interpreting-data-for-public-health-research-policy-or-practice'
