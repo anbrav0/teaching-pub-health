@@ -565,6 +565,5 @@ summary(RandIntModel_Mollusca)
 
 7.  A Quart o' {rUM} (Using the {rUM} Package for Reproducible Medical Research) (<https://www.youtube.com/watch?v=tiwx8mSUL1c&t=128s)>
 
-# Thank you! 🙏
-
+# Thank you! 🙏 Questions?
 
