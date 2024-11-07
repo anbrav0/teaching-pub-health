@@ -14,11 +14,11 @@ editor: source
 
 ## Objectives
 
--   Understand the process of data collection.
+-   Understand the process of interpreting data
 -   Study designs / protocols
 -   Challenges with data
 -   How data is interpreted and what it means
--   what I do in data science
+-   what to do in data science
 
 ## Introduction
 
@@ -52,16 +52,23 @@ A little bit about me
 
 ## Objectives
 
-Data is interpreted through many phases of a project, from research question to protocol deployment. This talk will cover:
+Data is interpreted through many phases of a project, and through many ways. Starting from the development of a research question, to collection of data, through publishing of findings. 
 
--   Study designs and your protocol
--   Understanding the beginnings of data collection
--   Challenges with data/data collection
--   How to (intro) data science with your data (the meat of todays topic)
+- Its important to consider the purpose, aims, and objects of why data is being collected. 
+    - Consider where the data comes from
+    - population of interest
+    - what is the purpose
+    
+Today we will be going over the process of interpreting data for public health related fields in the domain of research. 
+
+*we will also be talking a little bit of the data science process, as this is important when it comes to interpreting data.*
+
 
 # Study Design and protocol
 
 ## what is it that you want to do?
+
+Before getting your hands on data, its important to understand why the research project is being conducted (or why _should_ the study be funded).
 
 ::: {style="font-size:25px"}
 -   What are you trying to investigate?
@@ -89,8 +96,10 @@ Data is interpreted through many phases of a project, from research question to 
 
 ## Launching a study protocol
 
+Prior to getting your hands on the data consider the following ...
+
 ::: panel-tabset
-### your sample
+### sample
 
 ::: {style="font-size:25px"}
 What does your funding look like? What is the greatest number of samples you can have given your funding, to detect an effect? (Power analysis)
@@ -107,7 +116,7 @@ What does your funding look like? What is the greatest number of samples you can
 
 -   how many times will you be collecting this data? (is this supposed to be a longitudinal design? (more than one time point collected) cohort design?
 
-### your protocol
+### protocol
 
 -   What will the interviews/protocol be like? How long will they take? What type of data are you collecting and why? (more on this later)
     -   For ex: the ABCD protocol is a comprehensive set of physical, cognitive and social emotional, behavioral and academic assessments in addition to a neuroimaging and biospecimen analysis done either annually or bi-annually for 10 year through the child's life.
@@ -131,7 +140,33 @@ what type of data are you collecting?
 <https://abcdstudy.org/scientists/protocols/>
 :::
 
-# Proposing your study 📚
+# Study Proposal 📚
+
+## Prior to collection of data...
+
+
+::: columns
+::: {.column width="50%"}
+- research facilities, organizations, or companies will need to create a study proposal.
+
+- this is pretty much a document that outlines the aims, objectives, and methods of the study. Essentially making a claim as to why the study is important and how it will be conducted.
+
+- Before I get my hands on the project, if I am working with a study that collected human subject research data, I like to go over the projects protocol, and aims and goals as well as the purpose.
+:::
+
+::: {.column width="50%"}
+{{< pdf https://cancercontrol.cancer.gov/sites/default/files/2020-06/SGA_8631772.pdf width=400 height=600 >}}
+:::
+:::
+
+
+
+::: footer
+[NIH Grant Writing Process Guide](https://grants.nih.gov/grants-process)
+:::
+
+
+
 
 ## Steps
 
@@ -189,7 +224,8 @@ why is this important to do? What is the significance of this?
 
 ## Why am I talking about this as a data scientists? 👩‍🔬
 
--   Through the entire stage of your study, from research question to protocol deployment, you should consider and have a team of experts,(including a data scientist, from the beginning!)
+-   Through the entire stage of your study, from research question to protocol deployment, you should consider having a throughout understanding about the type of data you want to collect with a data scientist.
+
 -   Why?
     -   Because understanding the type of data you want to collect is important (data type)
     -   How to present your data findings (data visualization) How do you want to answer your research question? (Regression? mixed- effects? Correlated data?, nested- data?)
