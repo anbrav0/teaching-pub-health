@@ -8,7 +8,7 @@
 <link href="interpretting-data-for-pub-health_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="interpretting-data-for-pub-health_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="interpretting-data-for-pub-health_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.55">
+  <meta name="generator" content="quarto-1.5.52">
 
   <meta name="author" content="Ana Bravo">
   <meta name="dcterms.date" content="2024-11-07">
@@ -410,11 +410,11 @@ Ana Bravo
 <section id="objectives" class="slide level2">
 <h2>Objectives</h2>
 <ul>
-<li>Understand the process of data collection.</li>
+<li>Understand the process of interpreting data</li>
 <li>Study designs / protocols</li>
 <li>Challenges with data</li>
 <li>How data is interpreted and what it means</li>
-<li>what I do in data science</li>
+<li>what to do in data science</li>
 </ul>
 </section>
 <section id="introduction" class="slide level2">
@@ -450,13 +450,17 @@ Ana Bravo
 </section>
 <section id="objectives-1" class="slide level2">
 <h2>Objectives</h2>
-<p>Data is interpreted through many phases of a project, from research question to protocol deployment. This talk will cover:</p>
+<p>Data is interpreted through many phases of a project, and through many ways. Starting from the development of a research question, to collection of data, through publishing of findings.</p>
 <ul>
-<li>Study designs and your protocol</li>
-<li>Understanding the beginnings of data collection</li>
-<li>Challenges with data/data collection</li>
-<li>How to (intro) data science with your data (the meat of todays topic)</li>
+<li>Its important to consider the purpose, aims, and objects of why data is being collected.
+<ul>
+<li>Consider where the data comes from</li>
+<li>population of interest</li>
+<li>what is the purpose</li>
+</ul></li>
 </ul>
+<p>Today we will be going over the process of interpreting data for public health related fields in the domain of research.</p>
+<p><em>we will also be talking a little bit of the data science process, as this is important when it comes to interpreting data.</em></p>
 </section>
 <section>
 <section id="study-design-and-protocol" class="title-slide slide level1 center">
@@ -465,6 +469,7 @@ Ana Bravo
 </section>
 <section id="what-is-it-that-you-want-to-do" class="slide level2">
 <h2>what is it that you want to do?</h2>
+<p>Before getting your hands on data, its important to understand why the research project is being conducted (or why <em>should</em> the study be funded).</p>
 <div style="font-size:25px">
 <ul>
 <li><p>What are you trying to investigate?</p>
@@ -488,8 +493,9 @@ Ana Bravo
 </section>
 <section id="launching-a-study-protocol" class="slide level2">
 <h2>Launching a study protocol</h2>
+<p>Prior to getting your hands on the data consider the following …</p>
 <div class="panel-tabset">
-<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">your sample</a></li><li><a href="#tabset-2-2">recruitment site</a></li><li><a href="#tabset-2-3">your protocol</a></li><li><a href="#tabset-2-4">data</a></li></ul>
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">sample</a></li><li><a href="#tabset-2-2">recruitment site</a></li><li><a href="#tabset-2-3">protocol</a></li><li><a href="#tabset-2-4">data</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1">
 <div style="font-size:25px">
@@ -541,9 +547,25 @@ Ana Bravo
 </div>
 </section></section>
 <section>
-<section id="proposing-your-study" class="title-slide slide level1 center">
-<h1>Proposing your study 📚</h1>
+<section id="study-proposal" class="title-slide slide level1 center">
+<h1>Study Proposal 📚</h1>
 
+</section>
+<section id="prior-to-collection-of-data" class="slide level2">
+<h2>Prior to collection of data…</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p>research facilities, organizations, or companies will need to create a study proposal.</p></li>
+<li><p>this is pretty much a document that outlines the aims, objectives, and methods of the study. Essentially making a claim as to why the study is important and how it will be conducted.</p></li>
+<li><p>Before I get my hands on the project, if I am working with a study that collected human subject research data, I like to go over the projects protocol, and aims and goals as well as the purpose.</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><object data="https://cancercontrol.cancer.gov/sites/default/files/2020-06/SGA_8631772.pdf" type="application/pdf" width="400" height="600"><a href="https://cancercontrol.cancer.gov/sites/default/files/2020-06/SGA_8631772.pdf" download="">Download PDF file.</a></object></p>
+</div></div>
+<div class="footer">
+<p><a href="https://grants.nih.gov/grants-process">NIH Grant Writing Process Guide</a></p>
+</div>
 </section>
 <section id="steps" class="slide level2">
 <h2>Steps</h2>
@@ -617,8 +639,8 @@ Ana Bravo
 <section id="why-am-i-talking-about-this-as-a-data-scientists" class="slide level2">
 <h2>Why am I talking about this as a data scientists? 👩‍🔬</h2>
 <ul>
-<li>Through the entire stage of your study, from research question to protocol deployment, you should consider and have a team of experts,(including a data scientist, from the beginning!)</li>
-<li>Why?
+<li><p>Through the entire stage of your study, from research question to protocol deployment, you should consider having a throughout understanding about the type of data you want to collect with a data scientist.</p></li>
+<li><p>Why?</p>
 <ul>
 <li>Because understanding the type of data you want to collect is important (data type)</li>
 <li>How to present your data findings (data visualization) How do you want to answer your research question? (Regression? mixed- effects? Correlated data?, nested- data?)</li>
