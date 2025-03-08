@@ -18,20 +18,21 @@ editor: source
 -   Study designs / protocols
 -   Challenges with data
 -   How data is interpreted and what it means
--   what to do in data science
+-   How to do a little bit of data science
 
 ## Introduction
 
 A little bit about me
 
-::: columns
-::: {.column width="70%"}
+::::::: columns
+:::: {.column width="70%"}
 ::: panel-tabset
 ### In my past life:
 
 -   Mathematics tutor 🧮
 -   Research assistant
 -   Lab instructor
+-   Mathematics advisor
 
 ### Currently:
 
@@ -39,7 +40,7 @@ A little bit about me
 -   Non-profit board of directors for an LGBT+ org
 -   Data analyst from time to time
 :::
-:::
+::::
 
 ::: {.column width="30%"}
 ![](images/ana.png){width="234"}
@@ -48,30 +49,29 @@ A little bit about me
 ::: footer
 <https://anbrav0.github.io/>
 :::
-:::
+:::::::
 
 ## Objectives
 
-Data is interpreted through many phases of a project, and through many ways. Starting from the development of a research question, to collection of data, through publishing of findings. 
+Data is interpreted through many phases of a project, and through many ways. Starting from the development of a research question, to collection of data, through publishing of findings.
 
-- Its important to consider the purpose, aims, and objects of why data is being collected. 
-    - Consider where the data comes from
-    - population of interest
-    - what is the purpose
-    
-Today we will be going over the process of interpreting data for public health related fields in the domain of research. 
+-   Its important to consider the purpose, aims, and objects of why data is being collected.
+    -   Consider where the data comes from
+    -   population of interest
+    -   what is the purpose
+
+Today we will be going over the process of interpreting data for public health related fields in the domain of research.
 
 *we will also be talking a little bit of the data science process, as this is important when it comes to interpreting data.*
 
-
 # Study Design and protocol
 
-## what is it that you want to do?
+## The "what" and "why"
 
-Before getting your hands on data, its important to understand why the research project is being conducted (or why _should_ the study be funded).
+Before you even interpret data, its important to understand why the research project is being conducted (or why *should* the study be funded).
 
-::: {style="font-size:25px"}
--   What are you trying to investigate?
+:::: {style="font-size:25px"}
+-   What are you interested in investigating and why is it important
 
     -   Ex: what are factors that contribute to achievement gaps?
 
@@ -92,49 +92,61 @@ Before getting your hands on data, its important to understand why the research 
 ::: footer
 <https://abcdstudy.org/about/>
 :::
-:::
+::::
 
 ## Launching a study protocol
 
-Prior to getting your hands on the data consider the following ...
+Prior to getting your hands on the data consider the following in a research study ...
 
-::: panel-tabset
+::::: panel-tabset
 ### sample
 
 ::: {style="font-size:25px"}
-What does your funding look like? What is the greatest number of samples you can have given your funding, to detect an effect? (Power analysis)
+What is the largest sample size you are allotted to be able to detect any effect (power analysis)
 
--   Who are you recruiting? Are you working with human subjects? Animal subjects? Kids, adults, vulnerable populations? (recruitment and enrollment)
-    -   Ex: If your working with kids, how does their school schedule affect their ability to participate in the study, how will the study accommodate?
-    -   Who is/was eligible and ineligible to participate in the study? (inclusion exclusion criteria)
+-   Who are you recruiting (research subject)
+    -   Are you working with human subjects?
+    -   Animal subjects?
+    -   Kids, adults, vulnerable populations?
+        -   *and if for example, you are working with kids, how does school schedule play a role in participation?*
+    -   Who is eligible and ineligible to participate in the study? (inclusion exclusion criteria)
         -   Ex: we are interested in investigating the association between suicidality and ADHD diagnosis, children diagnosed with tic-disorder are not eligible to participate.
+        -   if you're working with human subject research, especially if it's a clinical trail for example, you should be informed and very aware of [randomization allocation.](https://cran.r-project.org/web/packages/flowchart/index.html)
 :::
 
 ### recruitment site
 
--   Who is running your protocol? Is this a multi-site study? (e.g., many sites will be recruiting participants)
+-   If you're working with human subject research, consider who will be completing the protocol and if this is a multi-site project.
 
--   how many times will you be collecting this data? (is this supposed to be a longitudinal design? (more than one time point collected) cohort design?
+-   how many times will you be collecting this data?
+
+-   is this supposed to be a longitudinal design or cohort study
+
+    -   these questions are important because this will in turn, help you understand your analytical approach.
+        -   *for example, if you are working with a longitudinal design, you may want to consider a model that accounts for repeated measures.*
 
 ### protocol
 
--   What will the interviews/protocol be like? How long will they take? What type of data are you collecting and why? (more on this later)
-    -   For ex: the ABCD protocol is a comprehensive set of physical, cognitive and social emotional, behavioral and academic assessments in addition to a neuroimaging and biospecimen analysis done either annually or bi-annually for 10 year through the child's life.
+-   What will the interviews/protocol be like?
+    -   e.g., How long does a protocol take to finish
+    -   What type of data (variables) are you collecting and why
+        -   For ex: the ABCD protocol is a comprehensive set of physical, cognitive and social emotional, behavioral and academic assessments in addition to a neuroimaging and biospecimen analysis done either annually or bi-annually for 10 year through the child's life.
 
 ### data
 
-what type of data are you collecting?
+What type of data was collected. Data comes in different flavors and types. First understanding the *type* of data that was collected helps you understand how to interpret it. data can include...
 
 ::: {style="font-size:25px"}
--   Sociodemographic variables? (age, income, gender, sex assigned at birth, migration status, relationship status, employment status)
+-   Sociodemographic variables (age, income, gender, sex assigned at birth, migration status, relationship status, employment status)
 -   Anthropometric data (height, weight, waist measurement?)
--   Family environment data? ( Family environmental Scale (FES: <https://www.mindgarden.com/96-family-environment-scale)>
--   Cultural value scales? (MACVS: <https://elcentro.sonhs.miami.edu/research/measures-library/macvs/index.html)>
--   Biological specimen? (hair urine, saliva, blood, blood samples?)
--   Neurocognitive tasks? (RAVLT, EST NIH-TB?)
--   Neuroimaging? (MRI Scan)
+-   Family environment data [Family environmental Scale](https://www.mindgarden.com/96-family-environment-scale) (FES)
+-   Cultural value scales [MACVS](https://elcentro.sonhs.miami.edu/research/measures-library/macvs/index.html)
+-   Biological specimen (hair urine, saliva, blood, blood samples)
+-   Neurocognitive tasks (RAVLT, EST NIH-TB)
+-   Neuroimaging (MRI Scan)
+-   Genomics (DNA, RNA)
 :::
-:::
+:::::
 
 ::: footer
 <https://abcdstudy.org/scientists/protocols/>
@@ -142,35 +154,32 @@ what type of data are you collecting?
 
 # Study Proposal 📚
 
-## Prior to collection of data...
+## Proposing a study for funding
 
+-   funding is a critical part of the research process.
+-   if you are working with a study that collected human subject research data, you will need to create a study proposal.
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
-- research facilities, organizations, or companies will need to create a study proposal.
+-   research facilities, organizations, or companies will need to create a study proposal.
 
-- this is pretty much a document that outlines the aims, objectives, and methods of the study. Essentially making a claim as to why the study is important and how it will be conducted.
+-   this is pretty much a document that outlines the aims, objectives, and methods of the study. Essentially making a claim as to why the study is important and how it will be conducted.
 
-- Before I get my hands on the project, if I am working with a study that collected human subject research data, I like to go over the projects protocol, and aims and goals as well as the purpose.
+-   Before I get my hands on the project, if I am working with a study that collected human subject research data, I like to go over the projects protocol, and aims and goals as well as the purpose.
 :::
 
 ::: {.column width="50%"}
 {{< pdf https://cancercontrol.cancer.gov/sites/default/files/2020-06/SGA_8631772.pdf width=400 height=600 >}}
 :::
-:::
-
-
+:::::
 
 ::: footer
 [NIH Grant Writing Process Guide](https://grants.nih.gov/grants-process)
 :::
 
+## And when writing a study proposal, this is what is considered...
 
-
-
-## Steps
-
-::: panel-tabset
+::::: panel-tabset
 ### aims
 
 Determine your aims
@@ -220,62 +229,63 @@ why is this important to do? What is the significance of this?
     -   Does the use of alcohol and marijuana and tobacco lead to use of other substances?
         -   Leads to substance use prevention and early interventions.
 :::
-:::
+:::::
 
 ## Why am I talking about this as a data scientists? 👩‍🔬
 
--   Through the entire stage of your study, from research question to protocol deployment, you should consider having a throughout understanding about the type of data you want to collect with a data scientist.
+-   Through the entire stage of getting to know the data its important to consider having a deep understanding of all that came before it
 
 -   Why?
-    -   Because understanding the type of data you want to collect is important (data type)
-    -   How to present your data findings (data visualization) How do you want to answer your research question? (Regression? mixed- effects? Correlated data?, nested- data?)
-    -   Reproducibility?
-        -   As researcher we have a duty to help other scientist be able to reproduce our same findings:
 
-to ensure that your work is reproducible you should use code 👩‍💻
+    -   Because having a solid understanding of study design helps for a solid understanding of the *type* of data you *should* collect
+        -   factor, numerical, ordinal, continuous, discrete
+    -   It helps also in presenting you findings, through visualizations
+    -   **Reproducibility**
+        -   As researcher you should be building within your protocol methods in ensuring that yout work is transparent and reproducible.
 
-# A (gentle) introduction of how I do Data Science in my work
+to ensure that your work is reproducible you should use code! 👩‍💻
 
-## Learn how to code
+# A *(gentle)* introduction of how to do data science and interpret data
 
--   if you are doing something repetitive, using a programming language can help you automate your work (using functions)
--   in your code/manuscript, you are able to data exploring, cleaning visualizng, *and* modeling straight onto the document. [(Rmarkdown/Quarto)](https://quarto.org/docs/get-started/hello/rstudio.html)
--   provides new tools for methodologies
--   transparency and reproducibility for your work (Quarto)
-    -   this is the most IMO!
+## 1. Learn how to code
 
-## Data Interpretation comes in many flavors
+-   If you are doing something repetitive, using a programming language can help you automate your work (using functions)
+-   Even if what you're doing isn't repetitive, using a programming language can help ensure that all the work you've done "cleaning" the data is documented.
+-   With cod you are able to data exploring, cleaning data, visualizing data, model data and report your data in a manuscript all on the same document [(Rmarkdown/Quarto)](https://quarto.org/docs/get-started/hello/rstudio.html)
+
+## 2. Interpretting Data
 
 ::: panel-tabset
-### Data prep
+### Database
 
--   Data preparation:
-    -   building redcap servers,
-    -   hosting any clinical or human subject research data instruments
-    -   building your survey items
+-   Get to know where the data being housed (REDCap, Qualtrics Remote Server etc.)
+    -   it's important to know where you're able to *pull* the data from, because then you're able get the data immediately on your computer. (e.g., [{tidyREDCap}](https://raymondbalise.github.io/tidyREDCap/articles/useAPI.html))
+    -   You are also able to build your own REDCap shells in which you can collect data from observations (e.g., [REDCap Resources](https://projectredcap.org/resources/videos/))
 
 ### EDA
 
 -   Explore the data:
-    -   What does my data look like?
-    -   what are the largest and smallest values in my data?
-    -   is this particular variable a "type in" form?
+    -   What does my data look like
+    -   what are the largest and smallest values in my data
+    -   is this particular variable a "type in" form (e.g., string)
     -   do I need to *transform* certain variables?
     -   do we need to group certain categories?
     -   in this step you also incorporate a little bit of visualizations
 
 ### Compute
 
--   what programming language will I use?
-    -   Do i need to use one to visualize, and a different one to model? (SAS to model, R to visualize?)
-    -   Are we planning on writing a manuscript, publish a paper, or present these findings?
+-   Consider the programming language you will untilize
+    -   R, SAS, Python, Stata, SPSS ([R and RStudio](https://posit.co/download/rstudio-desktop/) my personal favorite)
+    -   Consider using multiple language tools
+        -   being a polyglot in programming languages is a good thing! But it's good to also begin with one language first.
+    -   Consider if your planning on publishing your findings through a manuscript or present these findings to an audience
 
 ### Model
 
 -   Modeling your data:
-    -   what type of test will you be running for your data?
-    -   will you be running a t-test, linear regression, maybe a mixed effects model?
-    -   what type of questions did you ask? and what type of data do you have?
+    -   Consider the appropriate test to use for the type of data you have
+        -   will you be running a t-test, linear regression, maybe a mixed effects model more appropriate?
+    -   what type of questions were asked and what type of data do you have:
         -   is this data correlated?
         -   is this data nested?
         -   do you have repeated measures?
@@ -286,39 +296,34 @@ to ensure that your work is reproducible you should use code 👩‍💻
 
 -   Visualizing your data:
     -   what story do you want to convey to your audience?
-        -   I think that science, especially if you are working with Community Based Research (CBR), should be accessible. Meaning, understandable to a wide audience. (doctors, people in health care, researchers, educators, and the community) plain english please.
-            -   [*legalese*](https://bcs.mit.edu/news/even-lawyers-dont-legalese) 🤢
-    -   are you planning on building plots, graphs, visuals, maybe checking the normality of your data?
+        -   I think that science, especially if you are working with Community Based Research (CBR), should be accessible. Meaning, understandable to a wide audience. (doctors, people in health care, researchers, educators, and the community) so when conveying your findings, use plain english when appropriate.
+            -   Do not do [*legalese*](https://bcs.mit.edu/news/even-lawyers-dont-legalese) 🤢
+    -   EDA and visualizing go hand-in-hand so consider building plots, graphs, visuals, and when it comes time to present findings.
 :::
 
-## Data Preparation phase
+## REDCap: my favorite tool when it comes to managing databases
 
-::: columns
-::: {.column width="50%"}
+:::::: columns
+:::: {.column width="50%"}
 -   There is a fantastic video by an Associate Professor at the University of Miami on building Redcap (what I consider the golden standard in data collection) to collect research data on HIV and substance abuse
-    -   Questions I need to consider are:
-        -   how will this project be developed?
-        -   how will you set up your instruments?
-        -   will you have redcap check for eligibility?
-        -   what variable type would you like your instruments to be?
-:::
-
-::: {.column width="50%"}
-![](images/redcap.png){fig-align="center" width="439"}
-:::
 
 ::: footer
 [RedCap, HIV, Substance use - Raymond Balise](https://www.youtube.com/watch?v=GjiZm4OUgK0&t=92s)
 :::
+::::
+
+::: {.column width="50%"}
+![](images/redcap.png){fig-align="center" width="439"}
 :::
+::::::
 
 ## Exploratory Data Analysis
 
--   this part is *extremely* important to me, no matter what field you are in public health.
--   the first thing I do, once I have the data, is see "what does my data even look like?"
+-   this part is *extremely* important, no matter what field you are in public health.
+-   good practice to to ask yourself "what does my data even look like?"
 -   a basic overview of the EDA process is:
     -   generating descriptive statistics 📊
-    -   check to see if I have any outliers
+    -   check to see if there are any outliers (boxplots)
     -   maybe see if there is any differences between groups:
         -   e.g., calculating the average lifespan between men and women after a colorectal diagnosis
     -   this process also may include "cleaning" your data up a bit.
@@ -336,12 +341,16 @@ to ensure that your work is reproducible you should use code 👩‍💻
 
 ## Computing the data
 
--   What type of programming language are you planning on using for your research project?
-    -   personally in my work, I *always* set up a new project for team and use R/Quarto, keep folders called "raw data" , "clean data" , "outputs" "figures" neatly and organized in cloud based security server only accessible to my team. this method ensures i keep rigorous documentation of every step i handle the data. this method also allows me to:
-        -   include all my calculations (including modeling) in my code/manuscript.
-        -   maintain a tidy level of reproducability
-        -   and R is also *free.*
-            -   SAS is a wonderful and powerful tool, but if you do not have a membership outside the university setting it is hard to access.
+-   Consider the type of programming language are you planning on using for your research project
+    -   personally I like to set up a new project which is essentially dedicated folders storing the data, code, figures, outputs and scripts.
+
+![](images/example-project-setup-01.png){fig-align="center" width="411"}
+
+-   this method ensures i keep rigorous documentation of every step i handle the data. this method also allows me to: 
+    - include all my calculations (including modeling) in my code/manuscript. 
+    - maintain a tidy level of reproducability 
+    - and R is also *free.* 
+    - SAS is a wonderful and powerful tool, but if you do not have a membership outside the university setting it is hard to access.
 
 ::: {.column width="100%"}
 ![](images/quarto.png){fig-align="center"}
@@ -349,12 +358,12 @@ to ensure that your work is reproducible you should use code 👩‍💻
 
 ## Visualizing the data
 
--   During my work, EDA process and creating visualizations go hand in hand. Remember, during your EDA, you are trying to investigate what your data is trying to tell you. It is important to become familiar with the data and asking the right questions
-    -   how does the variation between variables look like?
+-   EDA process and creating visualizations go hand in hand. Remember, during your EDA, you are trying to investigate what your data is trying to tell you. It is important to become familiar with the data and asking the right questions such as
+    -   how does the variation between variables look like
     -   what does my distribution look like?
--   when you understand or become familiar with the data you can visualize it to convey important messages to inform the public, thus leading the changes in policy, as well as drive decision making about the population.
+-   when you understand or become familiar with the data you can visualize it to convey important messages to inform the public, and possibly leading the changes in policy, as well as drive decision making about the population.
 
-### Visuals example
+### Visualization examples
 
 ::: {.column width="100%"}
 ![individuals who reported they had a good time (non-outlier) vs. individuals who reported they did not have a good time (outlier) participating in a research study](images/ABCD.png){fig-align="center" width="439"}
@@ -386,6 +395,10 @@ check out the link below for developing good statistical practice when modeling 
 ![three way interaction between sex and outcome and predictor of interests](images/interaction_3way.png){fig-align="center"}
 :::
 
+::: footer
+[Tidy Modeling with R](https://www.tmwr.org)
+:::
+
 ## *Bring it all together now 🎶*
 
 -   Understand all these steps are vital points in interpreting your data:
@@ -397,11 +410,8 @@ check out the link below for developing good statistical practice when modeling 
 
 at each step, your making decisions about your data, and how you will interpret your findings.
 
-::: footer
-[developing good statistical practice with R](https://www.tmwr.org)
-:::
 
-## in my work now:
+## Currently in my work.. 
 
 -   i've had to implement every aspect of what we just talked about including
     -   mutating or transforming the data
@@ -579,27 +589,31 @@ summary(RandIntModel_Mollusca)
 **interpretation of temp variable** for the fixed part, we can interpret this parameter the same as a single-level regression model, [so $\beta_1$ is the increase/decrease in response for 1 unit increase/decrease in $x.$]{style="background-color:yellow"} In other words, for one unit increase in the degrees of temperature, there is a -1.5 decrease in Planktonic larval duration. (or, as the temperature increase, the plankton duration is lower.)
 :::
 
-::: {style="footer-size:9px"}
+:::: {style="footer-size:9px"}
 ::: footer
 [Random Intercept Model - Planktonic larval duration tutorial](https://anbrav0.github.io/R-health-blog/RandomInterceptModel.html)
 :::
-:::
+::::
 
 ## Resources
 
-1.  R for Data Science (<https://r4ds.hadley.nz)>
+1.  R for Data Science <https://r4ds.hadley.nz>
 
-2.  Modeling with R (<https://www.tmwr.org)>
+2.  Modeling with R <https://www.tmwr.org>
 
-3.  An Introduction to Statistical Learning with applications in R (<https://www.statlearning.com)>
+3. Introduction to Modern Statistics <https://www.openintro.org/book/ims/>
 
-4.  R for the Rest of Us (<https://rfortherestofus.com)>
+4.  R for the Rest of Us <https://rfortherestofus.com>
 
-5.  modern statistics with R (<https://www.modernstatisticswithr.com)>
+6. Introdction to Statistical Learning <https://www.statlearning.com/>
 
-6.  R for Epidemiology (<https://www.r4epi.com/)>
+7. Reproducible Research with R, RStudio, and Github - Raymond Balise <https://vimeo.com/585821837>
 
-7.  A Quart o' {rUM} (Using the {rUM} Package for Reproducible Medical Research) (<https://www.youtube.com/watch?v=tiwx8mSUL1c&t=128s)>
+8.  A Quart o' {rUM} (Using the {rUM} Package for Reproducible Medical Research (<https://www.youtube.com/watch?v=tiwx8mSUL1c&t=128s)>
 
-# Thank you! 🙏 Questions?
+9. OpenIntro (<https://www.openintro.org/>)
+    - I ❤️  their books
 
+
+
+# Questions?
