@@ -18,7 +18,7 @@ editor: source
 -   Study designs / protocols
 -   Challenges with data
 -   How data is interpreted and what it means
--   How to do a little bit of data science
+-   How to data science
 
 ## Introduction
 
@@ -51,7 +51,7 @@ A little bit about me
 :::
 :::::::
 
-## Objectives
+## Data interpretation
 
 Data is interpreted through many phases of a project, and through many ways. Starting from the development of a research question, to collection of data, through publishing of findings.
 
@@ -96,7 +96,7 @@ Before you even interpret data, its important to understand why the research pro
 
 ## Launching a study protocol
 
-Prior to getting your hands on the data consider the following in a research study ...
+Prior to getting your hands on the data (or interpretting it) consider the following in a research study ...
 
 ::::: panel-tabset
 ### sample
@@ -127,7 +127,7 @@ What is the largest sample size you are allotted to be able to detect any effect
 
 ### protocol
 
--   What will the interviews/protocol be like?
+-   What did the interview/ data collection process look like
     -   e.g., How long does a protocol take to finish
     -   What type of data (variables) are you collecting and why
         -   For ex: the ABCD protocol is a comprehensive set of physical, cognitive and social emotional, behavioral and academic assessments in addition to a neuroimaging and biospecimen analysis done either annually or bi-annually for 10 year through the child's life.
@@ -177,7 +177,7 @@ What type of data was collected. Data comes in different flavors and types. Firs
 [NIH Grant Writing Process Guide](https://grants.nih.gov/grants-process)
 :::
 
-## And when writing a study proposal, this is what is considered...
+## What writing a study proposal entails 
 
 ::::: panel-tabset
 ### aims
@@ -245,7 +245,7 @@ why is this important to do? What is the significance of this?
 
 to ensure that your work is reproducible you should use code! 👩‍💻
 
-# A *(gentle)* introduction of how to do data science and interpret data
+# A *(gentle)* introduction of how to interpret data using data science
 
 ## 1. Learn how to code
 
@@ -253,7 +253,7 @@ to ensure that your work is reproducible you should use code! 👩‍💻
 -   Even if what you're doing isn't repetitive, using a programming language can help ensure that all the work you've done "cleaning" the data is documented.
 -   With cod you are able to data exploring, cleaning data, visualizing data, model data and report your data in a manuscript all on the same document [(Rmarkdown/Quarto)](https://quarto.org/docs/get-started/hello/rstudio.html)
 
-## 2. Interpretting Data
+## 2. Familiarize yourself with data basics
 
 ::: panel-tabset
 ### Database
@@ -301,7 +301,9 @@ to ensure that your work is reproducible you should use code! 👩‍💻
     -   EDA and visualizing go hand-in-hand so consider building plots, graphs, visuals, and when it comes time to present findings.
 :::
 
-## REDCap: my favorite tool when it comes to managing databases
+## Databases
+
+- REDCap: my favorite tool when it comes to managing data 
 
 :::::: columns
 :::: {.column width="50%"}
