@@ -1,6 +1,7 @@
 ---
 title: "Interpreting Data for Public Health, Research Policy, or Practice"
 subtitle: "PHC6930C - Intergrative Seminar in Public Health"
+institute: "🟠From the U of Miami🟢"
 author: "Ana Bravo"
 date: now
 format:
@@ -14,15 +15,15 @@ editor: source
 
 ## Objectives
 
--   Understand the process of interpreting data
--   Study designs / protocols
+-   Understand the different ways of interpreting data
+-   Importance of Study designs & protocols
 -   Challenges with data
--   How data is interpreted and what it means
--   How to data science
+-   What it means to interpret data
+-   How to data science *(a gentle introduction)*
 
 ## Introduction
 
-A little bit about me
+A little bit about me, hi I'm Ana 👋
 
 ::::::: columns
 :::: {.column width="70%"}
@@ -30,8 +31,9 @@ A little bit about me
 ### In my past life:
 
 -   Mathematics tutor 🧮
--   Research assistant
+-   Research Assistant
 -   Lab instructor
+    -   just a title for "teaching assistant"
 -   Mathematics advisor
 
 ### Currently:
@@ -53,20 +55,34 @@ A little bit about me
 
 ## Data interpretation
 
-Data is interpreted through many phases of a project, and through many ways. Starting from the development of a research question, to collection of data, through publishing of findings.
+Lets define what we first mean by interpreting data...
 
--   Its important to consider the purpose, aims, and objects of why data is being collected.
+-   *Data interpretation is the process of making sense of data collected through research, instruments or surveys, experiments, or clinical trials. It involves the process of "extracting" the data to draw conclusions, identify patterns, make inferences, and informed decisions making based on findings.*
+
+Data is interpreted in many ways, and can be interpreted through many phases of a project or study. Starting from the begining such as the development of a research question, to the actual collection process itself, and through the means of eventually publishing these findings to inform other scientists and the greater public at large.
+
+-   When interpreting data, its important to consider the purpose, aims, and objectives of why this data was collected in the first place.
     -   Consider where the data comes from
+        -   (e.g., medical records, surveys)
     -   population of interest
+        -   (e.g., adults, children, marginalized populations)
     -   what is the purpose
+        -   (e.g., to understand a phenomenon, improve health outcomes etc.)
 
-Today we will be going over the process of interpreting data for public health related fields in the domain of research.
+Today we will be going over the process of interpreting data at multiple points in the research process, and how this is important for public health related fields.
 
-*we will also be talking a little bit of the data science process, as this is important when it comes to interpreting data.*
+*we will also be talking a little bit of the data science process, as some knowledge of data science practices is needed when interpretting data.*
 
 # Study Design and protocol
 
+*lets start from the beginning ...*
+
 ## The "what" and "why"
+
+Study design and protocols are really the foundation of any research or project. They help us understand the "what" and "why" of your research project.
+
+-   what as in, what we are doing
+-   why as in, why are we doing this
 
 Before you even interpret data, its important to understand why the research project is being conducted (or why *should* the study be funded).
 
@@ -94,9 +110,11 @@ Before you even interpret data, its important to understand why the research pro
 :::
 ::::
 
+as a data scientists this is relevant for you because during this stage you are defining your research question and the type of data you expect to collect. This stage helps define your boundaries and scope of your project.
+
 ## Launching a study protocol
 
-Prior to getting your hands on the data (or interpretting it) consider the following in a research study ...
+Prior to getting your hands on the data (or interpretting it) consider how the project/study was designed. A study design will usually define the following..
 
 ::::: panel-tabset
 ### sample
@@ -154,6 +172,8 @@ What type of data was collected. Data comes in different flavors and types. Firs
 
 # Study Proposal 📚
 
+*how scientists convince potential funding agencies to fund their research*
+
 ## Proposing a study for funding
 
 -   funding is a critical part of the research process.
@@ -161,7 +181,7 @@ What type of data was collected. Data comes in different flavors and types. Firs
 
 ::::: columns
 ::: {.column width="50%"}
--   research facilities, organizations, or companies will need to create a study proposal.
+-   research facilities, like universities, labs, organizations, or companies will need to create a study proposal.
 
 -   this is pretty much a document that outlines the aims, objectives, and methods of the study. Essentially making a claim as to why the study is important and how it will be conducted.
 
@@ -177,7 +197,7 @@ What type of data was collected. Data comes in different flavors and types. Firs
 [NIH Grant Writing Process Guide](https://grants.nih.gov/grants-process)
 :::
 
-## What writing a study proposal entails 
+## What a study proposal contains
 
 ::::: panel-tabset
 ### aims
@@ -237,21 +257,45 @@ why is this important to do? What is the significance of this?
 
 -   Why?
 
-    -   Because having a solid understanding of study design helps for a solid understanding of the *type* of data you *should* collect
+    -   Because having a solid understanding of study design helps for a solid understanding of the *type* of data the study *should* have collected
         -   factor, numerical, ordinal, continuous, discrete
     -   It helps also in presenting you findings, through visualizations
     -   **Reproducibility**
-        -   As researcher you should be building within your protocol methods in ensuring that yout work is transparent and reproducible.
+        -   As researcher you should be building reproducible workflows within the study design and protocol to ensure that other researchers can replicate your findings.
 
-to ensure that your work is reproducible you should use code! 👩‍💻
+Reproducibility is a spectrum, and like all spectrum, it is important to understand that there are different levels of reproducibility.
 
-# A *(gentle)* introduction of how to interpret data using data science
+::: {.column width="100%"}
+![](images/Reproducibility-Spectrum.png){fig-align="center" width="614"}
+:::
+
+One way to ensure that your work is reproducible you should use code! 👩‍💻
+
+::: {style="font-size:28px"}
+# A *(gentle)* introduction on how to interpret data using data science
+
+How to interpret data using data science practices.
+:::
 
 ## 1. Learn how to code
 
--   If you are doing something repetitive, using a programming language can help you automate your work (using functions)
+-   The data science and data analysis process can sometimes be iterative. What I mean by that is you may have to go back and forth between the steps of the data science process, such as EDA, computing, modeling, and visualizing. You may even do some repetitive things.
+
+-   If you are doing something repetitive, using a programming language can help you automate your work (creating or using functions)
+
 -   Even if what you're doing isn't repetitive, using a programming language can help ensure that all the work you've done "cleaning" the data is documented.
--   With cod you are able to data exploring, cleaning data, visualizing data, model data and report your data in a manuscript all on the same document [(Rmarkdown/Quarto)](https://quarto.org/docs/get-started/hello/rstudio.html)
+
+    -   You want to avoid "cleaning" data in a spreadsheet format like excel and directly editing values, because this can lead to errors and is not reproducible.
+
+-   With cod you are able to data exploring, cleaning data, visualizing data, model data and report your data in a manuscript all on the same document, such as using [Quarto.](https://quarto.org/)
+
+## `Hello Quarto`
+
+![](images/hello-quarto-positron.png){fig-align="center"}
+
+::: footer
+[Tutorial: Hello, Quarto](https://quarto.org/docs/get-started/hello/rstudio.html)
+:::
 
 ## 2. Familiarize yourself with data basics
 
@@ -279,6 +323,13 @@ to ensure that your work is reproducible you should use code! 👩‍💻
     -   Consider using multiple language tools
         -   being a polyglot in programming languages is a good thing! But it's good to also begin with one language first.
     -   Consider if your planning on publishing your findings through a manuscript or present these findings to an audience
+    -   Familiarize yourself with an IDE
+        -   Integrated Development Environment (IDE), which is pretty much a software application that helps you do all the DS process.
+            -   I like to use [RStudio](https://posit.co/download/rstudio-desktop/)
+
+            -   or [Positron](https://positron.posit.co/)
+
+            -   or VScode with the [Quarto extension](https://quarto.org/docs/get-started/hello/vscode.html)
 
 ### Model
 
@@ -303,7 +354,7 @@ to ensure that your work is reproducible you should use code! 👩‍💻
 
 ## Databases
 
-- REDCap: my favorite tool when it comes to managing data 
+-   REDCap: my favorite tool when it comes to managing data
 
 :::::: columns
 :::: {.column width="50%"}
@@ -348,14 +399,14 @@ to ensure that your work is reproducible you should use code! 👩‍💻
 
 ![](images/example-project-setup-01.png){fig-align="center" width="411"}
 
--   this method ensures i keep rigorous documentation of every step i handle the data. this method also allows me to: 
-    - include all my calculations (including modeling) in my code/manuscript. 
-    - maintain a tidy level of reproducability 
-    - and R is also *free.* 
-    - SAS is a wonderful and powerful tool, but if you do not have a membership outside the university setting it is hard to access.
+-   this method ensures i keep rigorous documentation of every step i handle the data. this method also allows me to:
+    -   include all my calculations (including modeling) in my code/manuscript.
+    -   maintain a tidy level of reproducability
+    -   and R is also *free.*
+    -   SAS is a wonderful and powerful tool, but if you do not have a membership outside the university setting it is hard to access.
 
 ::: {.column width="100%"}
-![](images/quarto.png){fig-align="center"}
+![](images/hello-quarto-rstudio.png){fig-align="center" width="607"}
 :::
 
 ## Visualizing the data
@@ -383,6 +434,28 @@ to ensure that your work is reproducible you should use code! 👩‍💻
 ![what can we say the bidirection relationship within these networks look like?](images/closeness.png)
 :::
 
+```{r}
+#| message: false
+#| echo: true
+
+# libraries needed
+library(tidyverse)
+library(ggplot2)
+
+# load data 
+data(mtcars)
+
+# visualize the mtcars data 
+ggplot(mtcars, aes(x = wt, y = mpg)) + 
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(title = "Relationship between Weight and Miles per Gallon",
+       x = "Weight (1000 lbs)",
+       y = "Miles per Gallon") +
+  theme_bw()
+```
+
+
 ## Modeling Data
 
 check out the link below for developing good statistical practice when modeling with R.
@@ -393,9 +466,28 @@ check out the link below for developing good statistical practice when modeling 
         -   how are you able to describe the relationship that implies this pattern
         -   what variable might be affecting this relationship?
 
-::: {.column width="100%"}
-![three way interaction between sex and outcome and predictor of interests](images/interaction_3way.png){fig-align="center"}
-:::
+## Modeling Data with R Cont.
+
+```{r}
+#| message: false
+#| echo: true
+
+# libraries needed --------------------------------------------------
+library(sjPlot)
+library(tidyverse)
+
+# load mtcars data --------------------------------------------------
+data(mtcars)
+
+# model - simple linear regression ----------------------------------
+m.mtcars <- lm(mpg ~ cyl + hp + wt, data = mtcars)
+
+# show output in a table -------------------------------------------
+tab_model(m.mtcars)
+
+```
+
+what can we say about the relationship between mpg and wt when controlling for cyl and hp?
 
 ::: footer
 [Tidy Modeling with R](https://www.tmwr.org)
@@ -412,8 +504,7 @@ check out the link below for developing good statistical practice when modeling 
 
 at each step, your making decisions about your data, and how you will interpret your findings.
 
-
-## Currently in my work.. 
+## Currently in my work..
 
 -   i've had to implement every aspect of what we just talked about including
     -   mutating or transforming the data
@@ -603,19 +694,19 @@ summary(RandIntModel_Mollusca)
 
 2.  Modeling with R <https://www.tmwr.org>
 
-3. Introduction to Modern Statistics <https://www.openintro.org/book/ims/>
+3.  Introduction to Modern Statistics <https://www.openintro.org/book/ims/>
 
 4.  R for the Rest of Us <https://rfortherestofus.com>
 
-6. Introdction to Statistical Learning <https://www.statlearning.com/>
+5.  Introdction to Statistical Learning <https://www.statlearning.com/>
 
-7. Reproducible Research with R, RStudio, and Github - Raymond Balise <https://vimeo.com/585821837>
+6.  Reproducible Research with R, RStudio, and Github - Raymond Balise <https://vimeo.com/585821837>
 
-8.  A Quart o' {rUM} (Using the {rUM} Package for Reproducible Medical Research (<https://www.youtube.com/watch?v=tiwx8mSUL1c&t=128s)>
+7.  A Quart o' {rUM} (Using the {rUM} Package for Reproducible Medical Research (<https://www.youtube.com/watch?v=tiwx8mSUL1c&t=128s)>
 
-9. OpenIntro (<https://www.openintro.org/>)
-    - I ❤️  their books
+8.  OpenIntro (<https://www.openintro.org/>)
 
+    -   I ❤️ their books
 
-
-# Questions?
+# Thank you!
+Questions?
