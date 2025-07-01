@@ -59,7 +59,7 @@ Lets define what we first mean by interpreting data...
 
 -   *Data interpretation is the process of making sense of data collected through research, instruments or surveys, experiments, or clinical trials. It involves the process of "extracting" the data to draw conclusions, identify patterns, make inferences, and informed decisions making based on findings.*
 
-Data is interpreted in many ways, and can be interpreted through many phases of a project or study. Starting from the begining such as the development of a research question, to the actual collection process itself, and through the means of eventually publishing these findings to inform other scientists and the greater public at large.
+Data is interpreted in many ways, and can be interpreted through many phases of a project or study. Starting from the beginning such as the development of a research question, to the actual collection process itself, and through the means of eventually publishing these findings to inform other scientists and the greater public at large.
 
 -   When interpreting data, its important to consider the purpose, aims, and objectives of why this data was collected in the first place.
     -   Consider where the data comes from
@@ -71,7 +71,7 @@ Data is interpreted in many ways, and can be interpreted through many phases of 
 
 Today we will be going over the process of interpreting data at multiple points in the research process, and how this is important for public health related fields.
 
-*we will also be talking a little bit of the data science process, as some knowledge of data science practices is needed when interpretting data.*
+*we will also be talking a little bit of the data science process, as some knowledge of data science practices is needed when interpreting data.*
 
 # Study Design and protocol
 
@@ -114,7 +114,7 @@ as a data scientists this is relevant for you because during this stage you are 
 
 ## Launching a study protocol
 
-Prior to getting your hands on the data (or interpretting it) consider how the project/study was designed. A study design will usually define the following..
+Prior to getting your hands on the data (or interpreting it) consider how the project/study was designed. A study design will usually define the following..
 
 ::::: panel-tabset
 ### sample
@@ -148,7 +148,7 @@ What is the largest sample size you are allotted to be able to detect any effect
 -   What did the interview/ data collection process look like
     -   e.g., How long does a protocol take to finish
     -   What type of data (variables) are you collecting and why
-        -   For ex: the ABCD protocol is a comprehensive set of physical, cognitive and social emotional, behavioral and academic assessments in addition to a neuroimaging and biospecimen analysis done either annually or bi-annually for 10 year through the child's life.
+        -   For ex: the ABCD protocol is a comprehensive set of physical, cognitive and social emotional, behavioral and academic assessments in addition to a neuroimaging and bio-specimen analysis done either annually or bi-annually for 10 year through the child's life.
 
 ### data
 
@@ -401,7 +401,7 @@ How to interpret data using data science practices.
 
 -   this method ensures i keep rigorous documentation of every step i handle the data. this method also allows me to:
     -   include all my calculations (including modeling) in my code/manuscript.
-    -   maintain a tidy level of reproducability
+    -   maintain a tidy method of organization of files
     -   and R is also *free.*
     -   SAS is a wonderful and powerful tool, but if you do not have a membership outside the university setting it is hard to access.
 
@@ -431,7 +431,7 @@ How to interpret data using data science practices.
 :::
 
 ::: {.column width="100%"}
-![what can we say the bidirection relationship within these networks look like?](images/closeness.png)
+![what can we say about the bidirectional relationship within these networks?](images/closeness.png)
 :::
 
 ```{r}
@@ -454,7 +454,6 @@ ggplot(mtcars, aes(x = wt, y = mpg)) +
        y = "Miles per Gallon") +
   theme_bw()
 ```
-
 
 ## Modeling Data
 
@@ -487,7 +486,7 @@ tab_model(m.mtcars)
 
 ```
 
-what can we say about the relationship between mpg and wt when controlling for cyl and hp?
+what can we say about the relationship between mpg and wt when controlling for `cyl` and `hp`?
 
 ::: footer
 [Tidy Modeling with R](https://www.tmwr.org)
@@ -506,7 +505,7 @@ at each step, your making decisions about your data, and how you will interpret 
 
 ## Currently in my work..
 
--   i've had to implement every aspect of what we just talked about including
+-   I've had to implement every aspect of what we just talked about including
     -   mutating or transforming the data
 
 ```{r}
@@ -709,4 +708,5 @@ summary(RandIntModel_Mollusca)
     -   I ❤️ their books
 
 # Thank you!
+
 Questions?
