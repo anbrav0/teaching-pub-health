@@ -21,6 +21,10 @@ editor: source
 -   What it means to interpret data
 -   How to data science *(a gentle introduction)*
 
+::: {.notes}
+keep this section brief.
+:::
+
 ## Introduction
 
 A little bit about me, hi I'm Ana 👋
